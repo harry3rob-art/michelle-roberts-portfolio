@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Michelle Winebush-Roberts — Brand Strategist</title>
+<meta name="description" content="Brand strategy, positioning, and voice by Michelle Winebush-Roberts (Miki), founder of Moonieful. Brand builds across B2B tech, education, and wellness." />
+<style>
+  :root{
+    --ink:#16242b; --muted:#5d6b72; --line:#e7e9ea;
+    --teal:#1a6269; --teal-dark:#15454a; --cream:#fbfaf7; --gold:#c9a14a;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; color:var(--ink); background:var(--cream);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1060px; margin:0 auto; padding:0 24px;}
+  a{color:var(--teal); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+
+  /* Header */
+  header.top{background:var(--teal-dark); color:#fff;}
+  header.top .wrap{display:grid; grid-template-columns:1.1fr .9fr; gap:36px; align-items:center; padding:56px 24px;}
+  header.top .eyebrow{color:#d8b463; letter-spacing:.14em; text-transform:uppercase; font-size:13px; font-weight:700; margin:0 0 14px;}
+  header.top h1{font-family:Georgia,"Times New Roman",serif; font-weight:700; font-size:42px; line-height:1.1; margin:0 0 6px;}
+  header.top .known{color:#9fd6cf; font-size:15px; margin:0 0 16px;}
+  header.top p.lede{font-size:18px; color:#dfeae8; margin:0 0 24px;}
+  .links{display:flex; flex-wrap:wrap; gap:10px;}
+  .links a{
+    display:inline-block; background:rgba(255,255,255,.08); color:#fff;
+    border:1px solid rgba(255,255,255,.22); padding:9px 16px; border-radius:999px;
+    font-size:14px; font-weight:600;
+  }
+  .links a:hover{background:#fff; color:var(--teal-dark); text-decoration:none;}
+  header.top .photo{border-radius:14px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,.28);}
+  header.top .photo img{display:block; width:100%; height:100%; object-fit:cover;}
+
+  /* Logo strip */
+  .clients{border-bottom:1px solid var(--line); background:#fff;}
+  .clients .wrap{display:flex; align-items:center; gap:14px 34px; flex-wrap:wrap; padding:22px 24px;}
+  .clients span.label{font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); font-weight:600;}
+  .clients span.name{font-weight:700; color:var(--ink); font-size:16px; opacity:.78;}
+
+  section{padding:54px 0;}
+  .section-head{max-width:660px; margin:0 0 30px;}
+  .section-head h2{font-family:Georgia,serif; font-size:30px; margin:0 0 8px;}
+  .section-head p{color:var(--muted); margin:0; font-size:17px;}
+
+  .case{
+    background:#fff; border:1px solid var(--line); border-radius:14px; overflow:hidden;
+    display:grid; grid-template-columns:1fr 1fr; margin-bottom:26px;
+    box-shadow:0 1px 2px rgba(20,40,45,.04);
+  }
+  .case .shot{background:#0d1518; min-height:240px; border-right:1px solid var(--line);}
+  .case .shot img{display:block; width:100%; height:100%; object-fit:cover; object-position:top;}
+  .case .body{padding:28px 30px;}
+  .case .tag{font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--teal); font-weight:700; margin:0 0 8px;}
+  .case h3{font-size:22px; margin:0 0 4px;}
+  .case .sub{color:var(--muted); font-size:14px; margin:0 0 16px;}
+  .case h4{font-size:13px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink); margin:16px 0 4px;}
+  .case p{margin:0 0 8px; font-size:15.5px;}
+  .case .visit{display:inline-block; margin-top:12px; font-weight:600; font-size:14.5px;}
+  .case:nth-child(even) .shot{order:2; border-right:none; border-left:1px solid var(--line);}
+
+  .product{background:#fff; border:1px solid var(--line); border-radius:14px; overflow:hidden; box-shadow:0 1px 2px rgba(20,40,45,.04);}
+  .product .grid{display:grid; grid-template-columns:1.05fr .95fr;}
+  .product .copy{padding:34px 36px;}
+  .product .copy .tag{color:var(--gold);}
+  .product .shot img{width:100%; height:100%; object-fit:cover; object-position:top; border-left:1px solid var(--line);}
+
+  footer{background:var(--teal-dark); color:#fff; padding:50px 0; margin-top:10px; text-align:center;}
+  footer h2{font-family:Georgia,serif; font-size:26px; margin:0 0 10px;}
+  footer p{color:#cfe2df; margin:0 0 20px;}
+  footer a.cta{display:inline-block; background:var(--gold); color:#2a1f06; font-weight:700; padding:12px 26px; border-radius:999px;}
+  footer a.cta:hover{text-decoration:none; filter:brightness(1.06);}
+  footer .small{font-size:13px; color:#8fb4b0; margin-top:22px;}
+  footer .small a{color:#cfe2df;}
+
+  @media (max-width:780px){
+    header.top .wrap{grid-template-columns:1fr;}
+    header.top .photo{order:-1; max-width:320px;}
+    header.top h1{font-size:34px;}
+    .case, .product .grid{grid-template-columns:1fr;}
+    .case .shot{border-right:none; border-bottom:1px solid var(--line); min-height:200px;}
+    .case:nth-child(even) .shot{order:0; border-left:none;}
+    .product .shot img{border-left:none; border-top:1px solid var(--line);}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="intro">
+      <p class="eyebrow">Brand Strategy &amp; Clarity</p>
+      <h1>Michelle Winebush-Roberts</h1>
+      <p class="known">Founder of Moonieful, where clients know me as Miki.</p>
+      <p class="lede">I help service founders become impossible to misunderstand. Brand strategy, positioning, and voice that make the right people get your value in seconds, long before they ever reach out.</p>
+      <div class="links">
+        <a href="mailto:mwrob808@gmail.com">mwrob808@gmail.com</a>
+        <a href="https://linkedin.com/in/mikiroberts" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://moonieful.com" target="_blank" rel="noopener">Moonieful</a>
+      </div>
+    </div>
+    <div class="photo"><img src="img/miki.jpg" alt="Michelle Winebush-Roberts" /></div>
+  </div>
+</header>
+
+<div class="clients">
+  <div class="wrap">
+    <span class="label">Brands I've shaped</span>
+    <span class="name">Moonieful</span>
+    <span class="name">Burgland Technology Partners</span>
+    <span class="name">SSG Educational</span>
+    <span class="name">Anita B. Volpe</span>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Selected work</h2>
+      <p>Each of these businesses did excellent work that strangers couldn't see yet. Brand strategy is the bridge: the positioning and voice that make the value obvious before a single conversation.</p>
+    </div>
+
+    <!-- Moonieful (flagship) -->
+    <div class="case">
+      <div class="shot"><img src="img/moonieful.jpeg" alt="Moonieful homepage" /></div>
+      <div class="body">
+        <p class="tag">My studio</p>
+        <h3>Moonieful</h3>
+        <p class="sub">Brand clarity studio · Founder</p>
+        <h4>The problem</h4>
+        <p>Talented service founders who stay invisible online because their message is foggy, so strangers pick someone less qualified.</p>
+        <h4>What I built</h4>
+        <p>The studio and the method behind it. A repeatable way to diagnose brand fog and rebuild a brand around the one thing its ideal client actually needs to hear. I lead brand strategy and voice; my co-founder Harry runs marketing and tech.</p>
+        <a class="visit" href="https://moonieful.com" target="_blank" rel="noopener">Visit the site &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Burgland -->
+    <div class="case">
+      <div class="shot"><img src="img/burgland.jpeg" alt="Burgland Technology Partners homepage" /></div>
+      <div class="body">
+        <p class="tag">B2B Technology</p>
+        <h3>Burgland Technology Partners</h3>
+        <p class="sub">IT consulting · San Antonio, TX</p>
+        <h4>The problem</h4>
+        <p>One more IT consultant in a sea of them, with nothing in the brand to set it apart.</p>
+        <h4>The strategy</h4>
+        <p>Positioned them as technology partners rather than vendors, and built a brand voice that makes complex, intimidating tech feel trustworthy to a non-technical buyer.</p>
+        <a class="visit" href="https://www.burglandtech.com" target="_blank" rel="noopener">Visit the site &rarr;</a>
+      </div>
+    </div>
+
+    <!-- SSG -->
+    <div class="case">
+      <div class="shot"><img src="img/ssg.jpeg" alt="SSG Educational homepage" /></div>
+      <div class="body">
+        <p class="tag">Mission-driven Education</p>
+        <h3>SSG Educational</h3>
+        <p class="sub">Trauma-informed teaching methodology</p>
+        <h4>The problem</h4>
+        <p>A founder with a powerful method and a moving story, but no brand a school district could quickly trust.</p>
+        <h4>The strategy</h4>
+        <p>Shaped the methodology and the founder's story into one clear, credible brand that leads with proof as much as heart, so the people holding the budget feel safe saying yes.</p>
+        <a class="visit" href="https://www.ssgeducational.com" target="_blank" rel="noopener">Visit the site &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Anita -->
+    <div class="case">
+      <div class="shot"><img src="img/anita.jpeg" alt="Anita B. Volpe homepage" /></div>
+      <div class="body">
+        <p class="tag">Personal Brand · Wellness</p>
+        <h3>Anita B. Volpe</h3>
+        <p class="sub">Beauty and wellness consultant</p>
+        <h4>The problem</h4>
+        <p>A career changer with deep expertise and no brand that signaled her authority.</p>
+        <h4>The strategy</h4>
+        <p>Built a personal brand on her own story and values, with a voice aimed straight at the woman who has tried everything and is tired of being sold to. Authority through trust, not hype.</p>
+        <a class="visit" href="https://www.anitabvolpe.com" target="_blank" rel="noopener">Visit the site &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>The method, productized</h2>
+      <p>What good is a brand-clarity method if only I can run it?</p>
+    </div>
+    <div class="product">
+      <div class="grid">
+        <div class="copy">
+          <p class="tag">Brand Diagnostic Tool</p>
+          <h3 style="font-size:24px; margin:0 0 10px;">SnapGist</h3>
+          <p style="margin:0 0 10px;">SnapGist turns the first step of my process into something anyone can run. It reads a website the way a first-time stranger does and shows where the message goes foggy, so a founder can see the gap before they ever book a call.</p>
+          <p style="margin:0 0 10px;">It is the clearest proof of how I diagnose a brand, because the thinking had to become a system.</p>
+          <a class="visit" href="https://snapgist.app" target="_blank" rel="noopener">Try SnapGist &rarr;</a>
+        </div>
+        <div class="shot"><img src="img/snapgist.jpeg" alt="SnapGist landing page" /></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <h2>Let's make your brand clear</h2>
+    <p>Brand strategy, positioning, and voice for service founders.</p>
+    <a class="cta" href="mailto:mwrob808@gmail.com">mwrob808@gmail.com</a>
+    <p class="small">
+      <a href="https://linkedin.com/in/mikiroberts" target="_blank" rel="noopener">LinkedIn</a>
+      &nbsp;·&nbsp;
+      <a href="https://moonieful.com" target="_blank" rel="noopener">moonieful.com</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
